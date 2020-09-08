@@ -1,0 +1,14 @@
+{% extends "ProyectoWebApp/base.html" %} <!-- Hereda de la plantilla base -->
+{% load static %} <!-- Carga contenido estatico -->
+
+{% block content %} <!-- Apertura bloque de contenido -->
+
+    {% for servicio in servicios %}
+    <div>
+            <h2 style="color: white">{{ servicio.titulo }}</h2>
+            <p style="color: white">{{ servicio.contenido }}</p>
+            <p><img src="{{ servicio.imagen.url }}"></p>
+    </div>
+    {% endfor%}
+
+{% endblock %} <!-- Cierre bloque de contenido -->
